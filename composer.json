@@ -1,0 +1,6 @@
+{
+    "name": "user/shop",
+    "require": {
+        "illuminate/database": "^5.3"
+    }
+}
