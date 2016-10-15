@@ -49,7 +49,10 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="/"><img src="/public/images/home/logo.png" alt="" /></a>
+                            <a href="/">
+                                <!-- <img src="/public/images/home/logo.png" alt="" /> -->
+                                <h1>Shop</h1>
+                            </a>
                         </div>
                     </div>
                     <div class="col-sm-8">

@@ -17,7 +17,7 @@ class ProductsController extends \core\Controller
         $pagination = new \core\Pagination($total, $page, $perpage, 'page=');
 
         $data = compact('products', 'title', 'categories', 'pagination');
-        $this->render('main', $data);
+        $this->render($data);
     }
 
     public function view($id)
@@ -26,7 +26,7 @@ class ProductsController extends \core\Controller
         $title = $product->name;
         $categories = \models\Category::all();
         $data = compact('product', 'title', 'categories');
-        $this->render('main', $data);
+        $this->render($data);
     }
 
     public function cart()
@@ -40,7 +40,7 @@ class ProductsController extends \core\Controller
             }
         }
         $data = compact('categories', 'title', 'products');
-        $this->render('main', $data);
+        $this->render($data);
     }
 
     public function addToCart($id, $cnt=1)

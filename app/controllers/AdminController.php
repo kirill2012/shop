@@ -8,7 +8,7 @@ class AdminController extends \core\Controller
     {
         $title = 'Админка';
         $data = compact('title');
-        $this->render('admin', $data);
+        $this->render($data, 'admin');
     }
 
     public function categories()
@@ -16,13 +16,13 @@ class AdminController extends \core\Controller
         $categories = \models\Category::all();
         $title = 'Категории';
         $data = compact('title', 'categories');
-        $this->render('admin', $data);
+        $this->render($data, 'admin');
     }
 
     public function categoryCreate(){
         $title = 'Создать категорию';
         $data = compact('title');
-        $this->render('admin', $data);
+        $this->render($data, 'admin');
     }
 
     public function storeCategory(){
@@ -35,7 +35,7 @@ class AdminController extends \core\Controller
 
     public function editCategory($id = ''){
         $data = \models\Category::find($id);
-        $this->render('main', $data);
+        $this->render($data, 'admin');
     }
 
     public function updateCategory($id = ''){

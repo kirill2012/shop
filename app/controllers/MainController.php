@@ -10,7 +10,7 @@ class MainController extends \core\Controller
         $products = \models\Products::where('is_recomended', '=', 1)->get();
         $title = 'Main';
         $data = compact('categories', 'products', 'title');
-        $this->render('second', $data);
+        $this->render($data, 'second');
     }
 
     public function contact()
@@ -32,7 +32,7 @@ class MainController extends \core\Controller
 
         $title = 'Контакты';
         $data = compact('title', 'userEmail', 'userText', 'result');
-        $this->render('second', $data);
+        $this->render($data, 'second');
     }
 
     public function send(){
@@ -53,7 +53,7 @@ class MainController extends \core\Controller
     public function register(){
         $title = 'Регистрация';
         $data = compact('title');
-        $this->render('second', $data);
+        $this->render($data, 'second');
     }
 
     public function store(){
@@ -68,7 +68,7 @@ class MainController extends \core\Controller
     public function login(){
         $title = 'Авторизация';
         $data = compact('title');
-        $this->render('second', $data);
+        $this->render($data, 'second');
     }
 
     public function logout(){
